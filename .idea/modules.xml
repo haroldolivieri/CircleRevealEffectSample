@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CircleRevealTest.iml" filepath="$PROJECT_DIR$/CircleRevealTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CircleRevealEffectSample.iml" filepath="$PROJECT_DIR$/CircleRevealEffectSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

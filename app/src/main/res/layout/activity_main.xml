@@ -1,78 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <FrameLayout
+        android:background="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:contentInsetStart="0dp"
-            android:contentInsetLeft="0dp"
-            app:contentInsetLeft="0dp"
-            app:contentInsetStart="0dp"
             android:layout_height="?android:attr/actionBarSize"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimary"
+            android:contentInsetLeft="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
 
             <ImageView
                 android:id="@+id/item_close"
-                android:padding="10dp"
-                android:layout_alignParentStart="true"
-                android:src="@drawable/ic_clear"
-                android:scaleType="centerInside"
                 android:layout_width="?android:attr/actionBarSize"
-                android:layout_height="?android:attr/actionBarSize" />
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentStart="true"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_close" />
 
             <TextView
-                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="#ID1"
+                android:textSize="24sp"
                 android:textColor="@android:color/white"
-                android:text="LIMPAR"/>
+                android:textStyle="bold" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:padding="15dp"
+                    android:layout_toLeftOf="@+id/item_email"
                     android:id="@+id/item_print"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_print"
                     android:layout_width="?android:attr/actionBarSize"
-                    android:layout_height="?android:attr/actionBarSize" />
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:src="@drawable/ic_print" />
+
+                <ImageView
+                    android:padding="15dp"
+                    android:id="@+id/item_email"
+                    android:layout_width="?android:attr/actionBarSize"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_email" />
 
             </RelativeLayout>
 
         </Toolbar>
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/receipt"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_comprovante"/>
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+            android:layout_height="match_parent">
 
             <ImageView
-                android:visibility="invisible"
                 android:id="@+id/icon_test"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_test" />
-        </LinearLayout>
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_receipt"
+                android:visibility="invisible" />
+
+            <View
+                android:visibility="invisible"
+                android:id="@+id/final_place"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="100dp"
+                android:background="@color/colorAccent" />
+
+        </RelativeLayout>
 
         <View
             android:id="@+id/content_reveal"
-            android:visibility="invisible"
             android:layout_width="match_parent"
-            android:layout_height="600dp"
-            android:background="@color/colorAccent" />
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:visibility="invisible" />
 
     </FrameLayout>
-
 
 
 </LinearLayout>
